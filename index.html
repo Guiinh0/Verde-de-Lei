@@ -50,8 +50,15 @@
         ],
         "contactPoint": {
           "@type": "ContactPoint",
+          "telephone": "+55-13-99193-4138",
           "contactType": "Atendimento ao Paciente",
-          "availableLanguage": "Portuguese"
+          "availableLanguage": "Portuguese",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
         }
       },
       {
@@ -165,7 +172,7 @@
               </svg>
               <span>Chame no WhatsApp</span>
             </a>
-            <span class="hero-microcopy">Atendimento humano, sem compromisso.</span>
+            <span class="hero-microcopy">Atendimento humano, sem compromisso · Seg. a sex., das 9h às 18h</span>
           </div>
 
           <div class="hero-badges" aria-label="Diferenciais da assessoria">
@@ -602,8 +609,7 @@
             </summary>
             <div class="faq-content">
               <p>
-                <!-- REVISAR: conferir com legislacao.md -->
-                Sim. A legislação brasileira e as resoluções da Anvisa (como a RDC nº 660/2022 para importação excepcional por pessoa física, a RDC nº 1.015/2026 para produtos farmacêuticos em drogarias e a RDC nº 1.014/2026 para o marco das associações sem fins lucrativos) estabelecem os caminhos legítimos para o paciente devidamente amparado por receita e laudo de profissional habilitado.
+                Sim. O acesso à cannabis medicinal no Brasil é respaldado por regulamentações sanitárias consolidadas da Anvisa. Entre elas destacam-se a <strong>RDC nº 660/2022</strong> (procedimento de importação excepcional por pessoa física para uso próprio via portal Gov.br), a <strong>RDC nº 1.015/2026</strong> (dispensação em farmácias mediante retenção de receituário de controle especial ou notificação de receita) e a <strong>RDC nº 1.014/2026</strong> (marco regulatório para entidades e associações de pacientes sem fins lucrativos). Em todas as vias legais, a avaliação prévia, o laudo e a prescrição por médico ou cirurgião-dentista legalmente habilitado são requisitos indispensáveis.
               </p>
             </div>
           </details>
@@ -616,8 +622,7 @@
             </summary>
             <div class="faq-content">
               <p>
-                <!-- REVISAR: conferir com legislacao.md -->
-                Não. A solicitação de autorização para importação excepcional de produtos derivados de cannabis no portal Gov.br é um serviço público totalmente gratuito por parte do governo federal. Desconfie de qualquer cobrança de taxa governamental para a emissão dessa licença.
+                Não. O procedimento de solicitação da autorização de importação excepcional no portal Gov.br (RDC nº 660/2022) é um serviço público gratuito oferecido pelo governo federal e pela Anvisa. Não existe cobrança de taxa governamental para a emissão dessa licença sanitária. O paciente arca apenas com o custo do produto prescrito e respectivo frete perante o fornecedor internacional escolhido, além da assessoria técnica caso deseje delegar a burocracia documental.
               </p>
             </div>
           </details>
@@ -630,22 +635,25 @@
             </summary>
             <div class="faq-content">
               <p>
-                <!-- REVISAR: conferir com legislacao.md -->
-                Nas <strong>farmácias</strong>, o produto tem autorização sanitária nacional e a retirada é imediata no balcão com receita de controle especial (ou notificação A), com catálogo mais restrito. Na <strong>importação direta</strong>, o paciente acessa um amplo catálogo internacional com autorização federal do Gov.br. Nas <strong>associações de pacientes</strong>, o acesso ocorre mediante filiação formal e apresentação de receita, laudo e termos de consentimento a entidades sem fins lucrativos.
+                São três caminhos formais com trâmites e características próprias:
               </p>
+              <ul>
+                <li><strong>Farmácias nacionais (RDC nº 1.015/2026):</strong> produtos com autorização sanitária nacional, dispensados exclusivamente por farmacêutico no balcão mediante retenção de receita médica (Receita de Controle Especial em 2 vias para até 0,2% de THC ou Notificação A para teores superiores), com catálogo mais restrito de formulações.</li>
+                <li><strong>Importação excepcional (RDC nº 660/2022):</strong> acesso individual a um amplo catálogo de fabricantes internacionais reconhecidos, mediante autorização prévia da Anvisa expedida pelo portal Gov.br antes do envio ao Brasil.</li>
+                <li><strong>Associações de pacientes (RDC nº 1.014/2026):</strong> entidades sem fins lucrativos (onde não há venda ou comercialização comum). O acesso ocorre por meio de filiação formal, apresentação de laudo com CID, prescrição médica e assinatura obrigatória do Termo de Adesão Associativa e do Termo de Consentimento Livre e Esclarecido (TCLE).</li>
+              </ul>
             </div>
           </details>
 
           <!-- Pergunta 5 -->
           <details class="faq-item">
             <summary class="faq-trigger">
-              <span class="faq-question">Qual é o prazo de validade da autorização da Anvisa?</span>
+              <span class="faq-question">Qual é o prazo de validade da autorização da Anvisa e das receitas?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-content">
               <p>
-                <!-- REVISAR: conferir com legislacao.md -->
-                De acordo com o Art. 7º da RDC nº 660/2022 da Anvisa, a autorização excepcional concedida ao paciente para importação tem validade de <strong>2 anos</strong>. Já as receitas médicas apresentadas nas farmácias têm prazo de validade de 30 dias para a dispensação.
+                Nos termos do Art. 7º da RDC nº 660/2022 da Anvisa, a autorização excepcional de importação concedida ao paciente tem validade de <strong>2 anos</strong>, permitindo importações periódicas ao longo desse período desde que haja prescrição médica correspondente. Já nas farmácias nacionais (RDC nº 1.015/2026), o prazo para a dispensação da receita de controle especial é de 30 dias contados da emissão. Como os prazos documentais e as exigências sanitárias podem variar conforme o tipo de notificação e a via pretendida, nossa assessoria confere detalhadamente a vigência de cada documento antes de qualquer submissão.
               </p>
             </div>
           </details>
@@ -712,21 +720,26 @@
         </div>
 
         <div class="footer-contact-group">
-          <h4 class="footer-heading">Contato & Redes</h4>
+          <h4 class="footer-heading">Contato & Atendimento</h4>
           <ul class="footer-contact-list">
             <li>
               <a href="https://instagram.com/verdedelei.assessoria" target="_blank" rel="noopener noreferrer" class="social-link">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
-                <span>@verdedelei.assessoria</span>
+                <span>Instagram: @verdedelei.assessoria</span>
               </a>
             </li>
             <li>
-              <span>E-mail: contato@verdedelei.com.br <!-- REVISAR: e-mail oficial de contato --></span>
+              <a href="#" class="social-link btn-whatsapp" data-wa-local="menu" aria-label="Chamar no WhatsApp">
+                <svg class="icon-wa" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08s.89 2.41 1.01 2.58c.13.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/>
+                </svg>
+                <span>WhatsApp: (13) 99193-4138</span>
+              </a>
             </li>
             <li>
-              <span>CNPJ: 00.000.000/0001-00 <!-- REVISAR: CNPJ oficial da assessoria --></span>
+              <span>Atendimento: Seg. a sex., das 9h às 18h</span>
             </li>
           </ul>
         </div>
@@ -759,19 +772,6 @@
       <span class="float-text">Chame no WhatsApp</span>
     </a>
   </div>
-
-  <!-- Banner LGPD de Cookies -->
-  <aside id="cookie-banner" class="cookie-banner" aria-label="Consentimento de Cookies" hidden>
-    <div class="cookie-content">
-      <p>
-        Utilizamos cookies essenciais e tecnologias de medição para aprimorar sua experiência. O contato em nosso site é realizado exclusivamente via WhatsApp. Consulte nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.
-      </p>
-      <div class="cookie-buttons">
-        <button type="button" id="cookie-reject" class="btn btn-sm btn-cookie-secondary">Recusar</button>
-        <button type="button" id="cookie-accept" class="btn btn-sm btn-cookie-primary">Aceitar</button>
-      </div>
-    </div>
-  </aside>
 
   <script src="script.js"></script>
 </body>

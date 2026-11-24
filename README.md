@@ -26,33 +26,28 @@ site/
 
 ---
 
-## 2. Como Trocar o Número do WhatsApp
+## 2. Configuração do WhatsApp
 
-Toda a lógica de contato está centralizada em uma única constante no topo do arquivo [`script.js`](./script.js):
+O número oficial da assessoria está configurado no topo do arquivo [`script.js`](./script.js):
 
-1. Abra o arquivo `site/script.js`.
-2. Localize a linha 9:
-   ```javascript
-   const WHATSAPP = "55DDDNUMERO";
-   ```
-3. Substitua `"55DDDNUMERO"` pelo número oficial com código do país (55) e DDD, apenas dígitos.  
-   *Exemplo:* `const WHATSAPP = "5511987654321";`
-4. Todos os 5 botões de WhatsApp do site (hero, meio, fim, flutuante e menu) serão atualizados automaticamente com o link correto e a mensagem de abertura pré-definida.
+```javascript
+const WHATSAPP = "5513991934138"; // (13) 99193-4138
+```
+
+Todos os 5 botões de WhatsApp do site (hero, meio, checklist, flutuante e menu de navegação) já apontam para esse número com a mensagem de abertura padrão pré-configurada e o horário de atendimento informado (segunda a sexta, das 9h às 18h).
 
 ---
 
-## 3. Onde Configurar o Google Tag Manager e o Meta Pixel
+## 3. Onde Configurar o Google Tag Manager e o Meta Pixel (Opcional)
 
-A landing page inclui suporte nativo à LGPD: tags de telemetria só disparam após o visitante clicar em **"Aceitar"** no banner de cookies.
-
-Para ativar seu rastreamento:
-1. Abra o arquivo `site/script.js`.
+Para ativar a medição de cliques e conversões:
+1. Abra o arquivo `script.js`.
 2. Localize as linhas 17 e 20:
    ```javascript
    const GTM_ID = "GTM-XXXXXXX"; 
    const META_PIXEL_ID = "000000000000000";
    ```
-3. Insira o seu ID do GTM (ex: `"GTM-K89ABC"`) e o ID numérico do Meta Pixel.
+3. Insira o seu ID do GTM ou do Meta Pixel. O carregamento ocorre de forma limpa e direta, sem banners intrusivos.
 4. Cada clique em qualquer botão do WhatsApp dispara um evento estruturado para o `dataLayer`:
    ```javascript
    dataLayer.push({
@@ -64,40 +59,21 @@ Para ativar seu rastreamento:
 
 ---
 
-## 4. Como Publicar (Deploy em 3 Passos)
+## 4. Como Publicar na Vercel (Passo a Passo)
 
-Esta landing page é 100% estática (HTML, CSS e JS puros), sem necessidade de build ou servidor Node.js.
-
-### Opção A: Vercel
-1. Acesse [vercel.com](https://vercel.com) e conecte seu repositório Git.
-2. Nas configurações do projeto, defina o **Root Directory** como `site`.
-3. Clique em **Deploy**.
-
-### Opção B: Netlify
-1. Acesse [netlify.com](https://netlify.com).
-2. Arraste e solte a pasta `site` diretamente no painel do Netlify, ou vincule via Git definindo a pasta de publicação como `site`.
-3. O site estará online com HTTPS gratuito instantaneamente.
-
-### Opção C: Cloudflare Pages
-1. Acesse o painel da Cloudflare e navegue até **Workers & Pages** > **Create application** > **Pages**.
-2. Conecte o repositório, defina o diretório de build como `site` (sem comando de build).
-3. Conclua o deploy.
+Como este repositório Git contém diretamente os arquivos do site na raiz:
+1. Acesse [vercel.com/new](https://vercel.com/new).
+2. Conecte sua conta do GitHub e selecione o repositório **`Verde-de-Lei`**.
+3. Deixe as opções padrão e clique em **Deploy**.
+4. O site estará online imediatamente com HTTPS e alta velocidade global.
 
 ---
 
-## 5. Lista de Pontos Marcados com `REVISAR`
+## 5. Conformidade Sanitária e Jurídica
 
-Para sua conferência prévia antes do lançamento oficial:
-
-1. **index.html & script.js:**
-   - Número do WhatsApp (`55DDDNUMERO`);
-   - ID do Google Tag Manager (`GTM-XXXXXXX`);
-   - ID do Meta Pixel (`000000000000000`);
-   - No rodapé: E-mail de contato oficial (`contato@verdedelei.com.br`) e CNPJ da assessoria (`00.000.000/0001-00`);
-   - Seção FAQ: Conferência das referências regulatórias (RDC 660/2022, RDC 1.015/2026, RDC 1.014/2026).
-2. **politica-de-privacidade.html:**
-   - E-mail do encarregado de dados (`privacidade@verdedelei.com.br`);
-   - Data de vigência oficial.
-3. **termos-de-uso.html:**
-   - Comarca de eleição jurídica para o foro.
+Todas as respostas e etapas do site foram alinhadas com as normas vigentes:
+- **RDC nº 660/2022:** Procedimento de importação excepcional por pessoa física para uso próprio via Gov.br (validade de 2 anos, sem cobrança de taxa da Anvisa).
+- **RDC nº 1.015/2026:** Dispensação farmacêutica em farmácias nacionais com receituário de controle especial.
+- **RDC nº 1.014/2026:** Marco regulatório para associações de pacientes sem fins lucrativos (filiação formal com receita, laudo com CID, Termo de Adesão e Termo de Consentimento - TCLE).
+- **Canais diretos:** Contato direto via WhatsApp `(13) 99193-4138` e Instagram `@verdedelei.assessoria`, sem exigência de CNPJ no ar.
 

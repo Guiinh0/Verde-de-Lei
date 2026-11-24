@@ -860,59 +860,8 @@ button {
   transform: translateY(-3px) scale(1.02);
 }
 
-/* 15. Banner LGPD de Cookies */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background-color: var(--color-verde-escuro);
-  color: var(--color-creme);
-  padding: var(--space-md) var(--space-lg);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
-  border-top: 1px solid rgba(217, 164, 65, 0.3);
-}
-
-.cookie-content {
-  max-width: 1180px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  font-size: 0.875rem;
-  line-height: 1.45;
-}
-
-.cookie-content a {
-  color: var(--color-dourado);
-  text-decoration: underline;
-}
-
-.cookie-buttons {
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.btn-cookie-primary {
-  background-color: var(--color-dourado);
-  color: var(--color-grafite);
-  font-weight: 600;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-}
-
-.btn-cookie-secondary {
-  background-color: transparent;
-  color: var(--color-creme);
-  border: 1px solid rgba(246, 243, 236, 0.4);
-  font-weight: 500;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-}
-
 /* ==========================================================================
-   16. MEDIA QUERIES (DESKTOP E TABLET)
+   15. MEDIA QUERIES (DESKTOP E TABLET)
    ========================================================================== */
 
 @media (min-width: 640px) {
@@ -923,12 +872,6 @@ button {
   }
 
   .cta-banner-middle {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .cookie-content {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

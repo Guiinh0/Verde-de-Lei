@@ -5,19 +5,19 @@
  */
 
 // 1. NÚMERO OFICIAL DO WHATSAPP
-// Substitua o valor abaixo pelo número real da Verde de Lei com DDI (55) e DDD (ex: "5511999999999")
-const WHATSAPP = "55DDDNUMERO";
+// Número oficial da Verde de Lei: DDD 13 (13 99193-4138)
+const WHATSAPP = "5513991934138";
 
 // Mensagem padrão de abertura de conversa
 const WHATSAPP_MENSAGEM = encodeURIComponent(
   "Olá! Vim pelo site da Verde de Lei e gostaria de entender como funciona o processo."
 );
 
-// 2. CONFIGURAÇÃO DE TAGS E ANALYTICS (GTM / META PIXEL)
-// <!-- REVISAR: insira o ID do seu Google Tag Manager abaixo quando for publicar -->
+// 2. CONFIGURAÇÃO DE TAGS E ANALYTICS (OPCIONAL)
+// Insira o ID do seu Google Tag Manager quando for utilizar
 const GTM_ID = "GTM-XXXXXXX"; 
 
-// <!-- REVISAR: insira o ID do seu Meta Pixel abaixo quando for publicar -->
+// Insira o ID do seu Meta Pixel quando for utilizar
 const META_PIXEL_ID = "000000000000000";
 
 // Garante existência da fila dataLayer para Google Tag Manager
@@ -95,62 +95,13 @@ function carregarMetaPixel(pixelId) {
   window.fbq("track", "PageView");
 }
 
-/**
- * Gestão do Banner de Consentimento de Cookies (LGPD)
- */
-function inicializarLGPD() {
-  const banner = document.getElementById("cookie-banner");
-  const btnAccept = document.getElementById("cookie-accept");
-  const btnReject = document.getElementById("cookie-reject");
-
-  if (!banner || !btnAccept || !btnReject) return;
-
-  const consentimento = localStorage.getItem("vdl_cookie_consent");
-
-  if (!consentimento) {
-    // Exibe o banner apenas se o usuário ainda não tiver optado
-    banner.hidden = false;
-  } else if (consentimento === "accepted") {
-    carregarGTM(GTM_ID);
-    carregarMetaPixel(META_PIXEL_ID);
-  }
-
-  btnAccept.addEventListener("click", () => {
-    localStorage.setItem("vdl_cookie_consent", "accepted");
-    banner.hidden = true;
-    carregarGTM(GTM_ID);
-    carregarMetaPixel(META_PIXEL_ID);
-  });
-
-  btnReject.addEventListener("click", () => {
-    localStorage.setItem("vdl_cookie_consent", "rejected");
-    banner.hidden = true;
-  });
-}
-
-/**
- * Acessibilidade do Acordeão de Perguntas Frequentes
- * Fecha automaticamente itens vizinhos se o usuário preferir foco único (opcional e elegante)
- */
-function inicializarAcordeao() {
-  const detailsList = document.querySelectorAll(".faq-item");
-  detailsList.forEach((targetDetail) => {
-    targetDetail.addEventListener("toggle", () => {
-      if (targetDetail.open) {
-        detailsList.forEach((detail) => {
-          if (detail !== targetDetail && detail.open) {
-            detail.removeAttribute("open");
-          }
-        });
-      }
-    });
-  });
-}
-
 // Inicialização automática ao carregar o DOM
 document.addEventListener("DOMContentLoaded", () => {
   inicializarLinksWhatsApp();
-  inicializarLGPD();
   inicializarAcordeao();
+
+  // Carrega analytics se configurados
+  if (GTM_ID && GTM_ID !== "GTM-XXXXXXX") carregarGTM(GTM_ID);
+  if (META_PIXEL_ID && META_PIXEL_ID !== "000000000000000") carregarMetaPixel(META_PIXEL_ID);
 });
 
